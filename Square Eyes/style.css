@@ -59,11 +59,7 @@ nav a:hover{
     background-color: #4C4C4E;
 }
 
-img{
-    max-width: 1080px;
     
-}
-
 #check {
     display: none;
 }
@@ -142,11 +138,25 @@ img{
 
 .cta-big{
     padding: 10px 90px;
+}
 
-
+.cta-browse{
+    background-color: #BD6139;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 20px;
+    left: 150px;
 }
 body{
     color: #fff;
+}
+main{
+    margin: 50px;
 }
 
 footer{
@@ -169,17 +179,21 @@ footer{
 
 /*Home page*/
 .welcome{
-    background-image: url(images/Prometheus.jpg);
-    min-height: 110vh;
+    background-image: url(images/dune-part-two-movie-poster.jpg);
     background-repeat: no-repeat;
-    background-size: 80%;
-    background-position-x: center;
-    background-position-y: bottom;
-    border-radius: 5px;
+    background-size: cover;
+    background-position-x: left;
+    background-position-y: top;
+    min-height: 60vh;
+}
+
+.welcome__content{
+    
+    
 }
 
 .movie-products__images{
-border-radius: 10px;
+
 }
 
 .resume-watching__images{
@@ -194,4 +208,22 @@ border-radius: 10px;
 input, select, textarea {
     border: 1px solid#0B0A0A;
     border-radius: 5px;
+}
+
+/*About page*/
+.about-right{
+    float: right;
+}
+.about-left{
+    float: left;
+}
+
+/*Movies page*/
+.new-movies{
+    text-align: center;
+}
+.new-movies img{
+    display: inline-flex;
+    margin: 10px 10px;
+    vertical-align: middle;
 }
