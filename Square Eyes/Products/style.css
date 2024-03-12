@@ -11,6 +11,15 @@ body{
     font-family: "Poppins", sans-serif;
     color: #fff;
 }
+
+
+
+main{
+    margin-top: 5px;
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+}
 .header{
     background: #24252A;
     position: fixed;
@@ -69,12 +78,13 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 #check {
     display: none;
 }
 
-.cta{
+.cta-purchase{
     background-color: #BD6139;
     color: #fff;
     text-decoration: none;

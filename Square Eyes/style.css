@@ -10,9 +10,7 @@ body{
     background-color: #0B0A0A;
     font-family: "Poppins", sans-serif;
 }
-h1,h2,p{
-    padding: 10px;
-}
+
 
 .header{
     background: #24252A;
@@ -142,7 +140,7 @@ nav a:hover{
     padding: 10px 90px;
 }
 
-.cta-browse{
+.cta-buy{
     background-color: #BD6139;
     color: #fff;
     text-decoration: none;
@@ -190,19 +188,30 @@ footer{
     
 }
 
+.resume-watching__thumbnail{
+    display: flex;
+}
+
 .welcome__content{
     position: absolute;
     top: 100px;
     left: 100px;
     color: #000;
 }
-.movie-products__images{
-
+.movie-products{
+    display: flex;
+    
+    margin: 50px auto;
+}
+.movie-products > * {
+    flex: 1;
 }
 
-.resume-watching__images{
-
-
+.resume {
+   display: flex;
+}
+.resume__watching{
+    
 }
 
 /*Success page*/
@@ -215,19 +224,24 @@ input, select, textarea {
 }
 
 /*About page*/
-.about-right{
-    float: right;
+.about-us{
+    display: flex;
 }
-.about-left{
-    float: left;
+.about-images{
+    width: 100%;
+}
+.discover-films{
+  display: flex;
+  
 }
 
 /*Movies page*/
 .new-movies{
-    text-align: center;
+    display: flex;
 }
-.new-movies img{
-    display: inline-flex;
-    margin: 10px 10px;
-    vertical-align: middle;
+.trending-movies{
+    display: flex;
+}
+.recommended-movies{
+    display: flex;
 }
