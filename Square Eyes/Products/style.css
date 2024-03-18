@@ -96,14 +96,17 @@ nav a:hover{
 footer{
     background: #24252A;
     bottom: 0;
-    height: 100px;
+    position: relative;
+    height: 65px;
     left: 0;
     width: 100%;
     color: #fff;
     padding: 1.3rem 5%;
+    margin-top: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align:left;
     
 }
 #check {
