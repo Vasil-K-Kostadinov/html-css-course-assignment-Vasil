@@ -19,8 +19,7 @@ body{
     display: flex;
     max-width: 1000px;
     margin: 50px auto;
-    justify-content:baseline
-    
+    flex-direction: column;
 }
 
 .product-batman__price {
@@ -28,11 +27,12 @@ body{
 }
 
 .batman-details{
-    padding: 0px 30px;
+    padding: 0px 65px;
 }
 
 .batman-details h1 {
     font-size: 3em;
+    display: inline;
 }
 
 .batman-details a {
@@ -41,7 +41,40 @@ body{
     margin: auto;
 }
 .batman-product__image{
-    margin: 10px;
+    display: flex;
+    margin-left: 40px;
+    width: 80%;
+    justify-self: center;
+
+}
+@media (min-width: 955px) {
+    .product-batman{
+        display: flex;
+        max-width: 1000px;
+        margin: 50px auto;
+        flex-direction: row;
+    }
+    .batman-details{
+        padding: 0px 30px;
+    }
+    
+    .batman-details h1 {
+        font-size: 3em;
+        
+    }
+    
+    .batman-details a {
+        display: block;
+        width: 157px;
+        margin: auto;
+    }
+    .batman-product__image{
+        display: flex;
+        margin-left: 40px;
+        width: max-content;
+    
+    }
+    
 }
 
 .header{
