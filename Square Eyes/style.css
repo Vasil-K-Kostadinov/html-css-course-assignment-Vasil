@@ -406,6 +406,7 @@ input, select, textarea {
     max-width: 500px;
     margin: 50px auto;
     text-align: center;
+    min-height: calc(100vh - 65px);
 }
 
 .contact p {
