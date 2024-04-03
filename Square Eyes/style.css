@@ -54,6 +54,7 @@ header::before {
 }
 .header-logo img{
     width: 220px
+    
 }
 
 
@@ -339,6 +340,7 @@ footer{
     align-items: center;
     gap: 50px;
     flex-direction: column;
+    min-height: calc(100vh - 65px);
 }
 
 
