@@ -371,6 +371,7 @@ footer{
     margin: 50px auto;
     text-align: center;
     min-height: 69vh;
+    min-height: calc(100vh - 65px);
 }
 
 @media (min-width: 800px){
@@ -379,6 +380,7 @@ footer{
     margin: 210px auto;
     text-align: center;
     min-height: 50vh;
+    
 }
 }
 
