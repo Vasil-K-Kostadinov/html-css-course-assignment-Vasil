@@ -7,7 +7,7 @@
 body{
     min-height: 100vh;
     margin: 0;
-    padding-top: 80px;
+    padding-top: 65px;
     background-color: #0B0A0A;
     
 }
@@ -23,7 +23,7 @@ h1, h2,p {
 .header{
     background: #24252A;
     position: fixed;
-    height: 60px;
+    height: 70px;
     top: 0;
     left: 0;
     width: 100%;
@@ -54,6 +54,7 @@ header::before {
 }
 .header-logo img{
     width: 220px
+    
     
 }
 
@@ -231,9 +232,9 @@ footer{
         background-image: url(images/godzilla-king.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 115vh;
+        min-height: 120vh;
         position: relative;
-        padding: 10px;
+        padding: 5px;
     }
     .welcome__content{
         position: absolute;
@@ -285,6 +286,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(1fr);
     grid-gap: 10px;
+    padding: 5px;
 }
 
 .movie-products h2 {
