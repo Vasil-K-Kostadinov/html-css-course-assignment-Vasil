@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="descripton" content="Home-page-for-Square-Eyes"/>
     <title>Square Eyes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,85 +28,17 @@
             <a href="contact.html" style="--i:3;">Contact</a>
         </nav>
     </header>
-        
-            <section class="welcome">
-                <div class="welcome__content">
-                    <h1>Godzilla II: King of the Monsters</h1>
-                    <p>Godzilla, who collides with Mothra, Rodan, and his ultimate nemesis, the three-headed King Ghidorah.</p>
-                    <a href="Products/product.html" class="cta-buy">Buy Now</a>
-                </div>
-            </section>
+    <h1>Movies</h1>
+    <select id="genre-dropdown">
+        <option value="all">All Genres</option>
+    </select>
+    <div id="product-list"></div>
     
-            <main class="main-content">
-                <section class="movie-products">
-                 <h2>Upcoming Movies</h2>
-                        <div class="movie__products">
-                            <a href="Products/product.html">
-                            <img src="images/thebatman.jpeg" alt="The-Batman" class="movie-products__images" />
-                            </a>
-                            <h3>The Batman</h3>
-                            
-                        </div>
-                            <div class="movie__products">
-                                <a href="Products/product.html">
-                                <img src="images/hobbs.jpeg" alt="Hobbs-&-Shaw Poster" class="movie-products__images" />
-                                </a>
-                                <h3>Hobbs & Shaw</h3>
-                            </div>
-
-                            <div class="movie__products">
-                                <a href="Products/product.html">
-                                <img src="images/dunecover.jpg" alt="DunePart2" class="movie-products__images" />
-                                </a>
-                                <h3>Dune Part 2</h3>
-                            </div>
-                            <div class="movie__products">
-                                <a href="Products/product.html">
-                                <img src="images/toystory4.jpeg" alt="Toy-Story-4-Poster" class="movie-products__images" />
-                                </a>
-                                <h3>Toy Story 4</h3>
-                            </div>
-                    </section>
-                
-        <section class="commercial">
-            <a href="Products/product.html">
-                <img src="images/Dune-header.jpg" alt="Dunce-poster">
-            </a>
-        </section>
-        <a href="Products/product.html" class="cta-buy">Buy Now</a>
-        <div class="dune-info">
-            <h2>Dune Part 2</h2>
-            <p>Paul Atreides unites with Chani and the Fremen while<br>seeking revenge against the conspirators who destroyed his family.</p>
-        </div>
-            <section class="resume-list">
-                <h2>Continue Watching</h2>
-                <div class="resume-watching__">
-                    <a href="Products/product.html">
-                    <img src="images/toystoryresume.jpg" alt="Toy-Story-4-Poster"/>
-                    </a>
-                    <h3>Toy Story 4</h3>
-                </div>
-                <div class="resume-watching__">
-                    <a href="Products/product.html">
-                    <img src="images/beekeeperresume.jpg" alt="Beekeeper-poster"/>
-                    </a>
-                    <h3>The Beekeeper</h3>
-                    
-                </div>
-                <div class="resume-watching__">
-                    <a href="Products/product.html">
-                    <img src="images/godzillaresume.jpg" alt="Godzilla-poster"/>
-                    </a>
-                    <h3>Godzilla</h3>
-                </div>
-                <div class="resume-watching__">
-                    <a href="Products/product.html">
-                    <img src="images/hollywoodresume.jpg" alt="Once-upon-a-time-in-hollywood-poster"/>
-                    </a>
-                    <h3>Once Upon a Time In Hollywood</h3>
-                </div>
-        </section>
-        </main>
+    <div id="cart">
+        <h2>Shopping Cart</h2>
+        <div id="cart-list"></div>
+        <div id="total-price">Total: $0.00</div>
+    </div>
     <footer class="footer">
         <section>
             <h3>Square Eyes, by &copy;Square Pictures</h3>
@@ -125,5 +56,6 @@
             </div>
         </section>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
