@@ -1,6 +1,5 @@
 let cart = [];
 
-// Load cart from local storage
 function loadCart() {
     const savedCart = localStorage.getItem("cart");
     if (savedCart) {
@@ -9,10 +8,9 @@ function loadCart() {
     }
 }
 
-// Display the cart's contents on the checkout page
 function displayCheckoutCart() {
     const checkoutCartList = document.getElementById("checkout-cart-list");
-    checkoutCartList.innerHTML = "";  // Clear the current cart list
+    checkoutCartList.innerHTML = "";
 
     cart.forEach(cartItem => {
         const cartItemElement = document.createElement("div");
@@ -36,7 +34,6 @@ function calculateTotalPrice() {
     document.getElementById("checkout-total-price").textContent = `Total: $${total.toFixed(2)}`;
 }
 
-// Complete checkout
 document.getElementById("complete-checkout").addEventListener("click", () => {
     const total = cart.reduce((sum, cartItem) => {
         return sum + (cartItem.product.onSale ? cartItem.product.discountedPrice : cartItem.product.price) * cartItem.quantity;
@@ -51,7 +48,7 @@ document.getElementById("complete-checkout").addEventListener("click", () => {
 
     alert("Thank you for your purchase!");
     localStorage.removeItem("cart");
-    window.location.href = "confirmation/index.html";  // Ensure this path matches the location of your confirmation page
+    window.location.href = "confirmation/index.html";
 });
 
 loadCart();

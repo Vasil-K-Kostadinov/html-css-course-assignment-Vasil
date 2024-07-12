@@ -160,7 +160,7 @@ main{
 footer{
     background: #24252A;
     bottom: 0;
-    position: inherit;
+    position: relative;
     height: 65px;
     left: 0;
     width: 100%;
@@ -176,6 +176,8 @@ footer{
 .footer a{
     margin: 0.2rem;
     font-size: 16px;
+    text-decoration: none;
+    color: #fff;
 }
 
 /* JavaScript Assignment*/

@@ -1,9 +1,6 @@
-// script-product-detail.js
-
 const apiUrl = "https://api.noroff.dev/api/v1/square-eyes";
-let product = null; // Initialize as null to hold the fetched product details
+let product = null;
 
-// Fetch and display product details
 async function fetchAndDisplayProductDetails(productId) {
     try {
         const response = await fetch(`${apiUrl}/${productId}`);
@@ -11,9 +8,8 @@ async function fetchAndDisplayProductDetails(productId) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         product = await response.json();
-        console.log("Fetched Product Details:", product);  // Log product details
+        console.log("Fetched Product Details:", product);
 
-        // Display product details on the page
         const productDetailsElement = document.getElementById("product-details");
         productDetailsElement.innerHTML = `
             <img src="${product.image}" alt="${product.name}" title="${product.name}">
@@ -30,7 +26,6 @@ async function fetchAndDisplayProductDetails(productId) {
     }
 }
 
-// Check if on product detail page and fetch/display product details if so
 if (window.location.pathname.includes("index.html")) {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get("id");

@@ -2,16 +2,15 @@ const apiUrl = "https://api.noroff.dev/api/v1/square-eyes";
 let products = [];
 let cart = [];
 
-// Fetch all products from the API
 async function fetchAllProducts() {
     try {
         const response = await fetch(apiUrl);
-        console.log("Response status:", response.status);  // Print the response status
+        console.log("Response status:", response.status);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         products = await response.json();
-        console.log("Fetched Products JSON:", products);  // Print the JSON data to the console
+        console.log("Fetched Products JSON:", products);
         populateGenreDropdown(products);
         displayProducts(products);
     } catch (error) {
@@ -20,7 +19,6 @@ async function fetchAllProducts() {
     }   
 }
 
-// Populate the genre dropdown
 function populateGenreDropdown(products) {
     const genreDropdown = document.getElementById("genre-dropdown");
     const genres = new Set(products.map(product => product.genre));
@@ -32,10 +30,9 @@ function populateGenreDropdown(products) {
     });
 }
 
-// Display products on the page
 function displayProducts(products) {
     const productList = document.getElementById("product-list");
-    productList.innerHTML = "";  // Clear the current list
+    productList.innerHTML = "";
 
     products.forEach(product => {
         const productItem = document.createElement("div");
@@ -64,16 +61,14 @@ function displayProducts(products) {
         
         productList.appendChild(productItem);
 
-        // Add event listener for Add to Cart button
         productItem.querySelector(".add-to-cart").addEventListener("click", () => {
             addToCart(product.id);
         });
     });
 }
 
-// Add a product to the cart
 function addToCart(productId) {
-    console.log("Adding to cart:", productId);  // Log productId to verify it's called
+    console.log("Adding to cart:", productId);
     const product = products.find(product => product.id === productId);
     if (!product) {
         console.error("Product not found:", productId);
@@ -83,34 +78,31 @@ function addToCart(productId) {
     const cartItem = cart.find(item => item.product.id === productId);
 
     if (cartItem) {
-        // Product already exists in cart, show confirmation prompt
         const confirmAdd = confirm("This product is already in your cart. Are you sure you want another one?");
         if (confirmAdd) {
             cartItem.quantity++;
         } else {
-            return; // Do nothing if user cancels
+            return; 
         }
     } else {
         cart.push({ product, quantity: 1 });
     }
 
-    console.log("Current cart:", cart);  // Log cart to verify its contents
+    console.log("Current cart:", cart);
     displayCart();
-    saveCart();  // Save cart to local storage
+    saveCart();
 }
 
-// Remove a product from the cart
 function removeFromCart(productId) {
-    console.log("Removing from cart:", productId);  // Debugging log
+    console.log("Removing from cart:", productId);
     cart = cart.filter(cartItem => cartItem.product.id !== productId);
     displayCart();
-    saveCart();  // Save cart to local storage
+    saveCart();
 }
 
-// Display the cart's contents
 function displayCart() {
     const cartList = document.getElementById("cart-list");
-    cartList.innerHTML = "";  // Clear the current cart list
+    cartList.innerHTML = "";
 
     cart.forEach(cartItem => {
         const cartItemElement = document.createElement("div");
@@ -123,17 +115,15 @@ function displayCart() {
         `;
         cartList.appendChild(cartItemElement);
 
-        // Add event listener for Remove from Cart button
         cartItemElement.querySelector(".remove-from-cart").addEventListener("click", (event) => {
             const productId = event.target.getAttribute('data-id');
-            console.log("Remove button clicked:", productId);  // Debugging log
+            console.log("Remove button clicked:", productId);
             removeFromCart(productId);
         });
     });
 
-    calculateTotalPrice();  // Update total price
+    calculateTotalPrice();
 
-    // Add Checkout button
     const checkoutButton = document.createElement("button");
     checkoutButton.textContent = "Checkout";
     checkoutButton.addEventListener("click", () => {
@@ -142,7 +132,6 @@ function displayCart() {
     cartList.appendChild(checkoutButton);
 }
 
-// Calculate and display total price
 function calculateTotalPrice() {
     let total = 0;
     cart.forEach(cartItem => {
@@ -151,12 +140,10 @@ function calculateTotalPrice() {
     document.getElementById("total-price").textContent = `Total: $${total.toFixed(2)}`;
 }
 
-// Save cart to local storage
 function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// Load cart from local storage
 function loadCart() {
     const savedCart = localStorage.getItem("cart");
     if (savedCart) {
@@ -165,7 +152,6 @@ function loadCart() {
     }
 }
 
-// Event listener for genre dropdown change
 document.getElementById("genre-dropdown").addEventListener("change", function() {
     const selectedGenre = this.value;
     if (selectedGenre === "all") {
@@ -176,6 +162,5 @@ document.getElementById("genre-dropdown").addEventListener("change", function() 
     }
 });
 
-// Initialize the application
 fetchAllProducts();
-loadCart();  // Load cart from local storage on page load
+loadCart();

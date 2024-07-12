@@ -11,6 +11,9 @@ body{
     background-color: #0B0A0A;
     
 }
+main {
+    flex: 1; 
+}
 
 h1 {
     font-size: 3em;
@@ -204,190 +207,9 @@ footer{
 .footer a{
     margin: 0.2rem;
     font-size: 16px;
-
+    text-decoration: none;
+    color: #fff;
 }
-
-/*Home page*/
-
-.welcome{
-    background-image: url(images/godzilla-king.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 50vh;
-    position: relative;
-    padding: 5px;
-}
-.welcome__content{
-    position: absolute;
-    text-align: center;
-    top: 250px;
-    left: 0px;
-}
-.main-content{
-    margin-top: 60px;
-}
-
-@media (min-width: 600px){
-    .welcome{
-        background-image: url(images/godzilla-king.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        min-height: 120vh;
-        position: relative;
-        padding: 5px;
-    }
-    .welcome__content{
-        position: absolute;
-        text-align: center;
-        top: 575px;
-        left: 100px;
-        color: #fff;
-    }
-}
-.dune-info {
-    padding: 10px;
-    margin: 10px
-}
-
-
-
-@media (min-width: 600px){
-    .movie-products {
-        grid-template-columns: repeat(2,1fr);
-    }
-    .resume-list {
-        grid-template-columns: repeat(2,1fr);
-    }
-    .commercial img {
-        width: 60%;
-    }
-    
-}
-
-
-@media (min-width: 800px){
-    
-    .movie-products {
-        grid-template-columns: repeat(4,1fr);
-    }
-    .resume-list {
-        grid-template-columns: repeat(4,1fr);
-    }
-    .dune-info {
-        display: flex;
-    }
-    .commercial img {
-        width: 60%;
-    }
- 
-}
-
-.movie-products{
-    display: grid;
-    grid-template-columns: repeat(1fr);
-    grid-gap: 10px;
-    padding: 5px;
-}
-
-.movie-products h2 {
-    grid-column: -1/1;
-}
-
-.movie-products img{
-    width: 100%;
-    height: 80%;
-    
-}
-
-
-.commercial {
-    width: 100%;
-    margin: 10px auto;
-    display: grid;
-    justify-self: center;
-    
-}
-
-
-.commercial img {
-    width: 100%;
-    justify-self: center;
-
-}
-
-.resume-list{
-    display: grid;
-    grid-template-columns: repeat(1fr);
-    grid-gap: 10px;
-    margin: 10px auto;
-    
-}
-.resume-list h2{
-    grid-column: -1/1;
-    
-}
-
-.resume-list img{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-   
-}
-
-
-/*Checkout page*/
-
-.checkout {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    flex-direction: column;
-    min-height: calc(100vh - 65px);
-}
-
-
-.checkout img{
-    width: 80%;
-    margin-left: 40px;
-
-}
-@media (min-width: 800px){
-    .checkout {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        flex-direction: row;
-
-    }
-   
-}
-/*Success page*/
-
-.fa-solid .fa-circle-check .fa-10x {
-    padding: 50px;
-    margin: 50px;
-}
-.checkout-success {
-    max-width: 1000px;
-    margin: 50px auto;
-    text-align: center;
-    min-height: 69vh;
-    min-height: calc(100vh - 65px);
-}
-
-@media (min-width: 800px){
-.checkout-success {
-    max-width: 1000px;
-    margin: 210px auto;
-    text-align: center;
-    min-height: 50vh;
-    
-}
-}
-
-
 
 /*Contact page*/
 
@@ -586,7 +408,7 @@ input, select, textarea {
     width: 120px;
     border: none;
     border-radius: 4px;
-    background-color: #0B0A0A;
+    background-color: #0DC6C6;
     color: white;
     cursor: pointer;
 }
@@ -596,14 +418,26 @@ input, select, textarea {
     padding: 5px 10px;
     border: none;
     border-radius: 4px;
-    background-color: #dc3545;
     color: white;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.cart-item button:hover {
-    background-color: #c82333;
+#cart-list button:hover {
+    background-color: #098383;
+}
+
+.terms-container, .privacy-container {
+    max-width: 800px;
+    margin: 0 auto;
+
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-container ul {
+    list-style: disc inside;
 }
 
 /* Media Queries */

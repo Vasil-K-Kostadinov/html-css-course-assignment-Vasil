@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const orderDetailsElement = document.getElementById("order-details");
     const totalPriceElement = document.getElementById("total-price");
 
-    // Load order details from session storage
     const orderDetails = JSON.parse(sessionStorage.getItem("orderDetails"));
 
     if (orderDetails && orderDetails.cart.length > 0) {
