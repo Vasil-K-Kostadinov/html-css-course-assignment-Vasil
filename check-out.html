@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="check-out.css" />
+    <meta
+      name="Vasil Kostadinov"
+      content="Film-makers At our  platform, we're dedicated to helping you develop your productions,  whether you're a small indie creator or a big-name filmmaker. , initial-scale=1.0"
+    />
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="https://s3-alpha-sig.figma.com/img/5bc6/3f91/609beeb4eff52be4385bd2f19ae82ef6?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KL52lDqEI6AuGzQ-w244OhZgxQfJgznX45ULupbkqaD4wmIZE5n-AurnN3-8sX5hUP2JqrtUyVvFdPK4IE~k2eEBg3SPE~t-ty9ZzcdTA4Gjy~EREvFOUy8w7rXQyaSkR34qFJrCMavJgGvg1F2~Un8ijyW5RzvLW~P6CJ1oXaGbhSdkTdKWz6RFKr8E~~2SygSTRUXgGPDagH30rtvCpI9FJqoVXvtDU0HCs2WydnrI01uZrP2IOmcbXqleTlLGn0uP0Hxoko~qBb785MaYZ8fTsn~yOI4yXJAgV2-DoO0tgov0C6BsIdOTwWeXPrChQ7FYx~i7PYq3Ir3kaLjMMA__"
+        alt="Logo"
+      />
+      <div class="wrapper-nav-bar">
+        <nav>
+          <a href="Gallery.html">Gallery</a>
+          <a href="landigpage.html">Home</a>
+          <a href="#" class="active">Shopping Cart</a>
+          <a href="Product-page.html">Sale</a>
+          <span class="sale-percentage">25%</span>
+        </nav>
+      </div>
+      <div class="header-icons">
+        <input class="srch" type="search" name="" placeholder="Type to text" />
+        <a href=""><button class="btn">Search</button></a>
+        <span class="icon">👤</span>
+        <span class="icon cart">🛒<span class="badge">3</span></span>
+      </div>
+    </header>
+
+    <main>
+      <div class="cart-container">
+        <!-- Cart Item 1 -->
+        <div class="cart-item">
+          <img src="Images.jpg/pexels-photo-4545949.jpeg" alt="Fashion" />
+          <div class="cart-details">
+            <h3>Fashion</h3>
+            <p>Video size 40 min</p>
+            <div class="quantity">
+              <span>−</span>
+              <span>Amount 1</span>
+              <span>+</span>
+            </div>
+            <p class="price">$25.00</p>
+            <a href="#" class="edit-order">Edit order</a>
+          </div>
+        </div>
+
+        <!-- Cart Item 2 -->
+        <div class="cart-item">
+          <img src="Images.jpg/pexels-photo-7299484.webp" alt="Cinema" />
+          <div class="cart-details">
+            <h3>Cinema</h3>
+            <p>Video size 40 min</p>
+            <div class="quantity">
+              <span>−</span>
+              <span>Amount 1</span>
+              <span>+</span>
+            </div>
+            <p class="money">$25.00</p>
+            <a href="#" class="edit-order">Edit order</a>
+          </div>
+        </div>
+
+        <!-- Cart Item 3 -->
+        <div class="cart-item">
+          <img src="Images.jpg/pexels-photo-7266001.webp" alt="007 Motive" />
+          <div class="cart-details">
+            <h3>007 Motive</h3>
+            <p>Video size 40 min</p>
+            <div class="quantity">
+              <span>−</span>
+              <span>Amount 1</span>
+              <span>+</span>
+            </div>
+            <p class="price">$25.00</p>
+            <a href="#" class="edit-order">Edit order</a>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="summary">
+          <h2>Summary</h2>
+          <label for="promocode">Promocode</label>
+          <input type="text" id="promocode" />
+          <button class="Apply">APPLY</button>
+          <p>Total: $75</p>
+          <p>Shipping: $15</p>
+          <p>Total Cost: $90</p>
+          <button class="pay-btn">Pay</button>
+          <button class="gift-card-btn">Pay with gift card</button>
+        </div>
+        <div class="payment">
+          <h3>Payment</h3>
+          <div class="Visa">
+            <p>
+              <input type="radio" name="payment" checked /> Visa Debit Card ****
+              **** **** 3738
+            </p>
+          </div>
+          <div class="Master">
+            <p>
+              <input type="radio" name="payment" /> Master Card **** **** ****
+              5159
+            </p>
+          </div>
+          <div>
+            <a href="#"><button class="pay-card">Add payment card</button></a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer-main">
+      <div class="wrapper-main footer-main-flex">
+        <a class="footer-getintouch" href="#">GET IN TOUCH WITH ME</a>
+        <div class="footer-sidemap">
+          <ul class="ul1">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">GALLERY</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">ABOUT ME</a></li>
+            <li><a href="#">DESIGN</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">WEB DEVELOPMENT</a></li>
+            <li><a href="#">FILM PRODUCTION</a></li>
+            <li><a href="#">VIDEO EDDITING</a></li>
+            <li><a href="#">GRAPIH DESIGN</a></li>
+            <li><a href="#">PROJECT</a></li>
+          </ul>
+          <ul class="blue">
+            <li><p>GET IN TOUCH</p></li>
+            <li><p>Tlf: +47 1235543</p></li>
+            <li><p>Lqlqland@gmail.com</p></li>
+            <li><p>Address: Country: Norway, City: Name.</p></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
