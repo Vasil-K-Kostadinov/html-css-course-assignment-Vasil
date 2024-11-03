@@ -6,7 +6,7 @@
 }
 
 body {
-  background-image: url("/images/pexels-moose-photos-170195-1037992.jpg");
+  background-image: url("../images/pexels-moose-photos-170195-1037992.jpg");
   background-position: center;
   position: relative;
   width: 100%;
